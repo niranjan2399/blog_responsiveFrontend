@@ -1,0 +1,100 @@
+.header {
+  background: linear-gradient(135deg, $vlred, $lred);
+  height: 60rem;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 5.6rem 2.4rem;
+
+    @include breakpoint-up(medium) {
+      padding: 5.5rem 16rem 5.5rem 16.6rem;
+    }
+
+    img {
+      height: 3.4rem;
+      width: auto;
+    }
+
+    .hamburger {
+      align-items: center;
+
+      img {
+        height: 2rem;
+        width: auto;
+      }
+      @include breakpoint-up(medium) {
+        display: none;
+      }
+    }
+
+    .fs__tags {
+      @include breakpoint-up(medium){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        margin-left: 6.4rem;
+      }
+
+      @include breakpoint-down(small) {
+        display: none;
+        // position: absolute;
+        // top: 12.6rem;
+      }
+
+      .fs__lt {
+        display: flex;
+        justify-content: space-between;
+        width: 31rem;
+        height: 6rem;
+        align-items: center;
+
+        .lt_a {
+          display: flex;
+          position: relative;
+          height: 100%;
+          align-items: center;
+
+          &:hover {
+            a {
+              text-decoration: underline;
+              &::after {
+                transform: rotateX(180deg);
+              }
+            }
+            .hidden_item {
+              display: block;
+            }
+          }
+
+          a {
+            &::after {
+              content: url("../../images/icon-arrow-light.svg");
+              padding-left: 0.8rem;
+              display: inline-block;
+            }
+          }
+          .hidden_item {
+            display: none;
+            ul {
+              padding: 0;
+            }
+          }
+        }
+      }
+
+      .fs__rt {
+        a {
+          padding-right: 3rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

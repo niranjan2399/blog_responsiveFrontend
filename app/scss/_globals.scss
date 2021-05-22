@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css2?family=Overpass");
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bt-left {
+  border-bottom-left-radius: 10rem;
+}
+
+.tp-right {
+  border-top-right-radius: 10rem;
+}
+
+.button {
+  border: none;
+  width: 14rem;
+  height: 5rem;
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-white-red {
+  background-color: $white;
+  color: $lred;
+
+  &:hover {
+    background-color: $vlred-hover;
+    color: white;
+  }
+}
+
+.a_tag {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  color: $white;
+  font-family: "Ubuntu", sans-serif;
+  text-decoration: none;
+}
+
+.hidden_item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $white;
+  width: 16.8rem;
+  padding: 3.4rem 2.4rem;
+  border-radius: 0.5rem;
+  margin-top: 2.6rem;
+
+  li {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: "Overpass", sans-serif;
+    text-align: center;
+    color: $vdblackblue;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      font-weight: 700;
+    }
+  }
+}
+
+.animate{
+  animation: hamburger .8s linear forwards;
+}
