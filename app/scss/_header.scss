@@ -31,50 +31,76 @@
     }
 
     .fs__tags {
-      @include breakpoint-up(medium){
+      background: $white;
+      border-radius: 0.5rem;
+
+      @include breakpoint-down(small) {
+        display: none;
+        position: absolute;
+        top: 12.6rem;
+        left: 0;
+        right: 0;
+        margin: 0 2.4rem 0 2.4rem;
+        height: auto;
+        padding: 2.4rem;
+        animation: small_s_reveal .3s ease-in-out forwards;
+      }
+
+      @include breakpoint-up(medium) {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex: 1;
         margin-left: 6.4rem;
-      }
-
-      @include breakpoint-down(small) {
-        display: none;
-        // position: absolute;
-        // top: 12.6rem;
+        background: none;
       }
 
       .fs__lt {
-        display: flex;
-        justify-content: space-between;
-        width: 31rem;
-        height: 6rem;
-        align-items: center;
+        @include breakpoint-up(medium) {
+          display: flex;
+          justify-content: space-between;
+          width: 31rem;
+          height: 6rem;
+          align-items: center;
+        }
 
         .lt_a {
           display: flex;
-          position: relative;
-          height: 100%;
+          flex-direction: column;
+          justify-content: center;
           align-items: center;
+          @include breakpoint-down(small) {
+            padding-bottom: 3.8rem;
+          }
 
-          &:hover {
-            a {
-              text-decoration: underline;
-              &::after {
-                transform: rotateX(180deg);
+          @include breakpoint-up(medium) {
+            position: relative;
+            height: 100%;
+
+            &:hover {
+              a {
+                text-decoration: underline;
+                &::after {
+                  transform: rotateX(180deg);
+                }
               }
-            }
-            .hidden_item {
-              display: block;
+              .hidden_item {
+                display: block;
+              }
             }
           }
 
+
           a {
-            &::after {
+            &::after{
               content: url("../../images/icon-arrow-light.svg");
               padding-left: 0.8rem;
               display: inline-block;
+
+              @include breakpoint-down(small) {
+                content: url("../../images/icon-arrow-dark.svg");
+                // animation: arrow_animate .1s linear forwards;
+              }
             }
           }
           .hidden_item {
@@ -87,8 +113,27 @@
       }
 
       .fs__rt {
+        @include breakpoint-down(small) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-top: 1px solid $grayishblue;
+          margin: 0;
+
+          button{
+            background: linear-gradient(to right, $vlred,$lred);
+            color: $white;
+          }
+        }
         a {
-          padding-right: 3rem;
+          @include breakpoint-down(small) {
+            margin-top: 3.6rem;
+            margin-bottom: 2.4rem;
+          }
+          @include breakpoint-up(medium) {
+            padding-right: 3rem;
+          }
 
           &:hover {
             text-decoration: underline;

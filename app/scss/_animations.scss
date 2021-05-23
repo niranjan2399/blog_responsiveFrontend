@@ -15,3 +15,39 @@
     transform: scale(1);
   }
 }
+
+
+@keyframes reveal{
+  0%{
+    transform: translateY(-.5rem) translateX(-50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(.5rem) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes small_s_reveal{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes small_s_hide {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes arrow_animate{
+  100%{
+    transform: rotateX(180deg);
+  }
+}
