@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
-@import url("https://fonts.googleapis.com/css2?family=Overpass");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 
 html {
   font-size: 62.5%;
@@ -15,6 +14,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 .bt-left {
@@ -42,7 +43,7 @@ body {
 
   &:hover {
     background-color: $vlred-hover;
-    color: white;
+    color: $white;
   }
 }
 
@@ -50,9 +51,9 @@ body {
   font-family: "Overpass", sans-serif;
   text-decoration: none;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.1rem;
-  color: $vdgrayblue;
+  color: $vdblue;
 
   @include breakpoint-up(medium) {
     color: $white;
@@ -80,11 +81,15 @@ body {
 
   li {
     list-style: none;
+    font-family: "Ubuntu", sans-serif;
     font-size: 1.6rem;
-    font-weight: 300;
-    font-family: "Overpass", sans-serif;
+    font-weight: 400;
     text-align: center;
     color: $vdblackblue;
+
+    @include breakpoint-down(small){
+      color: hsl(206, 19%, 46%);
+    }
 
     &:not(:last-child) {
       margin-bottom: 2rem;
@@ -92,7 +97,7 @@ body {
 
     &:hover {
       cursor: pointer;
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 }
@@ -101,8 +106,8 @@ body {
   animation: hamburger 0.4s linear forwards;
 }
 
-.animate_arrows_small{
-  &::after{
-    animation: arrow_animate .1s linear forwards;
+.animate_arrows_small {
+  &::after {
+    animation: arrow_animate 0.1s linear forwards;
   }
 }

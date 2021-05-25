@@ -26,6 +26,7 @@ function toggleIcon() {
       a_tags.forEach((tag) => {
         tag.nextElementSibling.style.display = "none";
         tag.classList.remove("animate_arrows_small");
+        tag.style.color = 'hsl(208, 49%, 24%)';
       });
     }, 200);
 
@@ -35,7 +36,7 @@ function toggleIcon() {
 
 function show_small(e) {
   if (window.innerWidth <= 1023) {
-    e.preventDefault();
+    // e.preventDefault();
 
     const div = e.target.nextElementSibling;
     a_tags.forEach((tag) => {
@@ -43,15 +44,18 @@ function show_small(e) {
         if (div.style.display === "block") {
           tag.nextElementSibling.style.display = "none";
           this.classList.toggle("animate_arrows_small");
+          tag.style.color = "hsl(208, 49%, 24%)";
           return;
         } else {
           div.style.display = "block";
+          tag.style.color = "hsl(206, 19%, 46%)";
           this.classList.add("animate_arrows_small");
           this.parentElement.style.paddingBottom = "2.4rem";
         }
       } else {
         tag.classList.remove("animate_arrows_small");
         tag.nextElementSibling.style.display = "none";
+        tag.style.color = "hsl(208, 49%, 24%)";
         this.parentElement.style.paddingBottom = "3.8rem";
       }
     });

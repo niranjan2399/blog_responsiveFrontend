@@ -1,6 +1,24 @@
 .header {
   background: linear-gradient(135deg, $vlred, $lred);
   height: 60rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/bg_pattern_intro.svg");
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 10rem;
+    background-position: -43.5rem -134.5rem;
+
+    @include breakpoint-down(small) {
+      background-size: 350%;
+      z-index: 0;
+      background-position: -35rem -20rem;
+    }
+  }
 
   .nav {
     display: flex;
@@ -8,9 +26,12 @@
     position: relative;
     align-items: center;
     padding: 5.6rem 2.4rem;
+    z-index: 2;
 
     @include breakpoint-up(medium) {
+      max-width: 144rem;
       padding: 5.5rem 16rem 5.5rem 16.6rem;
+      margin-inline: auto;
     }
 
     img {
@@ -43,7 +64,8 @@
         margin: 0 2.4rem 0 2.4rem;
         height: auto;
         padding: 2.4rem;
-        animation: small_s_reveal .3s ease-in-out forwards;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1), 0 0 2rem rgba(0, 0, 0, 0.2);
+        animation: small_s_reveal 0.3s ease-in-out forwards;
       }
 
       @include breakpoint-up(medium) {
@@ -90,16 +112,14 @@
             }
           }
 
-
           a {
-            &::after{
+            &::after {
               content: url("../../images/icon-arrow-light.svg");
               padding-left: 0.8rem;
               display: inline-block;
 
               @include breakpoint-down(small) {
                 content: url("../../images/icon-arrow-dark.svg");
-                // animation: arrow_animate .1s linear forwards;
               }
             }
           }
@@ -121,8 +141,8 @@
           border-top: 1px solid $grayishblue;
           margin: 0;
 
-          button{
-            background: linear-gradient(to right, $vlred,$lred);
+          button {
+            background: linear-gradient(to right, $vlred, $lred);
             color: $white;
           }
         }
@@ -137,6 +157,80 @@
 
           &:hover {
             text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .header__content {
+    position: relative;
+    display: block;
+    font-family: "Overpass", sans-serif;
+    z-index: 1;
+    text-align: center;
+    color: $white;
+
+    .intro {
+      padding-inline: 4.1rem;
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-top: 5.7rem;
+        margin-bottom: 1.77rem;
+
+        @include breakpoint-up(small) {
+          font-size: 3.8rem;
+        }
+
+        @include breakpoint-up(medium) {
+          font-size: 4.8rem;
+          margin-top: 6.3rem;
+          margin-bottom: 1.98rem;
+        }
+
+        @include breakpoint-up(large) {
+          font-size: 6rem;
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 5rem;
+        letter-spacing: 0.05rem;
+
+        @include breakpoint-up(medium) {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .btns {
+      .button:first-child {
+        color: $lred;
+        margin-right: 0.8rem;
+        padding: 0;
+
+        @include breakpoint-up(medium) {
+          &:hover {
+            background-color: $vlred-hover;
+            color: white;
+          }
+        }
+      }
+      .button:last-child {
+        color: $white;
+        background: transparent;
+        border: 1px solid $white;
+        padding: 0;
+        margin-left: 0.8rem;
+
+        @include breakpoint-up(medium) {
+          &:hover {
+            background-color: $white;
+            color: $vlred-hover;
           }
         }
       }
