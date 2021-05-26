@@ -63,7 +63,7 @@ body {
 .hidden_item {
   border-radius: 0.5rem;
   cursor: pointer;
-  @include breakpoint-down(small){
+  @include breakpoint-down(small) {
     background-color: hsl(240, 7%, 94%);
     width: 100%;
     margin-top: 2.4rem;
@@ -87,7 +87,7 @@ body {
     text-align: center;
     color: $vdblackblue;
 
-    @include breakpoint-down(small){
+    @include breakpoint-down(small) {
       color: hsl(206, 19%, 46%);
     }
 
@@ -110,4 +110,17 @@ body {
   &::after {
     animation: arrow_animate 0.1s linear forwards;
   }
+}
+
+.head_small {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: $vdblue;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 0;
+  padding-inline: 1rem;
+  line-height: 2.7rem;
 }

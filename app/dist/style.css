@@ -245,6 +245,19 @@ body {
           animation: arrow_animate 0.1s linear forwards;
 }
 
+.head_small {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #1f3f5b;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 0;
+  padding-inline: 1rem;
+  line-height: 2.7rem;
+}
+
 .header {
   background: linear-gradient(135deg, #ff8f70, #ff3d54);
   height: 60rem;
@@ -553,5 +566,97 @@ body {
     background-color: #fff;
     color: #ff7a85;
   }
+}
+
+.sec__1 {
+  text-align: center;
+  width: 100%;
+  font-family: "Overpass", sans-serif;
+  border: 1px solid red;
+}
+
+@media (min-width: 64em) {
+  .sec__1 {
+    padding-inline: 16.6rem;
+    max-width: 144rem;
+    margin-inline: auto;
+  }
+}
+
+.sec__1 > h2 {
+  margin-top: 10.3rem;
+  margin-bottom: 4.6rem;
+}
+
+@media (min-width: 64em) {
+  .sec__1 > h2 {
+    font-size: 3.2rem;
+    margin-top: 15.6rem;
+    margin-bottom: 5.6rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .sec__1 .rem__sec1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.sec__1 .rem__sec1 .img__sec1 {
+  background-image: url("../../images/illustration-editor-mobile.svg");
+  height: 33rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid blue;
+}
+
+@media (min-width: 64em) {
+  .sec__1 .rem__sec1 .img__sec1 {
+    background-image: none;
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .sec__1 .rem__sec1 .img__sec1::after {
+    content: url("../../images/illustration-editor-desktop.svg");
+    position: absolute;
+    left: 2.5rem;
+    top: -19rem;
+  }
+}
+
+.sec__1 .rem__sec1 .text__sec1 {
+  text-align: center;
+  padding-inline: 2.4rem;
+}
+
+@media (min-width: 64em) {
+  .sec__1 .rem__sec1 .text__sec1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    text-align: left;
+  }
+}
+
+.sec__1 .rem__sec1 .text__sec1 h2 {
+  padding-inline: 2rem;
+  letter-spacing: 0.1rem;
+  margin-top: 5rem;
+  margin-bottom: 3.2rem;
+}
+
+.sec__1 .rem__sec1 .text__sec1 p {
+  color: #4b5862;
 }
 /*# sourceMappingURL=style.css.map */
