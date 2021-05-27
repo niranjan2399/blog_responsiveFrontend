@@ -35,8 +35,10 @@
     }
 
     img {
-      height: 3.4rem;
-      width: auto;
+      @include breakpoint-down(small) {
+        height: 3.4rem;
+        width: auto;
+      }
     }
 
     .hamburger {

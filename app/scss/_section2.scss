@@ -31,7 +31,7 @@
       background-position: center bottom;
 
       @include breakpoint-up(medium) {
-          width: 160%;
+        width: 160%;
         background-size: 118%;
         background-position: -21.5rem -51rem;
         border-bottom-left-radius: 10rem;
@@ -75,7 +75,7 @@
       max-width: 72rem;
       align-self: center;
       padding: 0;
-      padding-left: 3.2rem;
+      padding-left: 2rem;
       text-align: left;
     }
 
