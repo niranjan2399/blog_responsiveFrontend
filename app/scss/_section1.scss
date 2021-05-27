@@ -1,11 +1,10 @@
 .sec__1 {
   text-align: center;
   width: 100%;
-  font-family: "Overpass", sans-serif;
-  border: 1px solid red;
   
   @include breakpoint-up(medium){
-    padding-inline: 16.6rem;
+    padding-right: 16rem;
+    padding-left: 16.6rem;
     max-width: 144rem;
     margin-inline: auto;
   }
@@ -31,7 +30,6 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      border: 1px solid blue;
 
       @include breakpoint-up(medium){
         background-image: none;
@@ -56,6 +54,8 @@
         flex: 1;
         order: 1;
         text-align: left;
+        padding-inline: 0;
+        padding-right: 3rem;
       }
 
       h2 {
@@ -63,10 +63,20 @@
         letter-spacing: 0.1rem;
         margin-top: 5rem;
         margin-bottom: 3.2rem;
+        @include breakpoint-up(medium){
+          padding-inline: 0;
+        }
       }
-
+      
       p {
         color: $vdgrayishblue;
+        @include breakpoint-up(medium){
+          padding-inline: 0;
+          line-height: 2rem;
+        }
+        @include breakpoint-up(large){
+          line-height: 2.7rem;
+        }
       }
     }
   }

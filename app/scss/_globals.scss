@@ -16,6 +16,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   min-height: 100vh;
+  font-family: 'Overpass',sans-serif;
 }
 
 .bt-left {
@@ -123,4 +124,5 @@ p {
   margin: 0;
   padding-inline: 1rem;
   line-height: 2.7rem;
+  letter-spacing: .05rem;
 }

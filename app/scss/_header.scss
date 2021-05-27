@@ -212,6 +212,7 @@
         color: $lred;
         margin-right: 0.8rem;
         padding: 0;
+        background-color: $white;
 
         @include breakpoint-up(medium) {
           &:hover {

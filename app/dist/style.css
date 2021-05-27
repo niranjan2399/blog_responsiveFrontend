@@ -138,6 +138,7 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   min-height: 100vh;
+  font-family: 'Overpass',sans-serif;
 }
 
 .bt-left {
@@ -256,6 +257,7 @@ p {
   margin: 0;
   padding-inline: 1rem;
   line-height: 2.7rem;
+  letter-spacing: .05rem;
 }
 
 .header {
@@ -544,6 +546,7 @@ p {
   color: #ff3d54;
   margin-right: 0.8rem;
   padding: 0;
+  background-color: #fff;
 }
 
 @media (min-width: 64em) {
@@ -571,13 +574,12 @@ p {
 .sec__1 {
   text-align: center;
   width: 100%;
-  font-family: "Overpass", sans-serif;
-  border: 1px solid red;
 }
 
 @media (min-width: 64em) {
   .sec__1 {
-    padding-inline: 16.6rem;
+    padding-right: 16rem;
+    padding-left: 16.6rem;
     max-width: 144rem;
     margin-inline: auto;
   }
@@ -610,7 +612,6 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  border: 1px solid blue;
 }
 
 @media (min-width: 64em) {
@@ -646,6 +647,8 @@ p {
         -ms-flex-order: 1;
             order: 1;
     text-align: left;
+    padding-inline: 0;
+    padding-right: 3rem;
   }
 }
 
@@ -656,7 +659,142 @@ p {
   margin-bottom: 3.2rem;
 }
 
+@media (min-width: 64em) {
+  .sec__1 .rem__sec1 .text__sec1 h2 {
+    padding-inline: 0;
+  }
+}
+
 .sec__1 .rem__sec1 .text__sec1 p {
   color: #4b5862;
+}
+
+@media (min-width: 64em) {
+  .sec__1 .rem__sec1 .text__sec1 p {
+    padding-inline: 0;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 80em) {
+  .sec__1 .rem__sec1 .text__sec1 p {
+    line-height: 2.7rem;
+  }
+}
+
+.sec__2 {
+  margin-top: 9rem;
+  background: linear-gradient(135deg, #2c2d3f, #3f4164);
+  height: 62.5rem;
+  margin-top: 27.2rem;
+}
+
+@media (min-width: 64em) {
+  .sec__2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 28rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 40rem;
+    padding-inline: 16rem;
+  }
+}
+
+.sec__2 .temp {
+  position: relative;
+}
+
+@media (min-width: 64em) {
+  .sec__2 .temp {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 72rem;
+  }
+}
+
+.sec__2 .temp::before {
+  content: "";
+  background: url("../../images/bg-pattern-circles.svg");
+  position: absolute;
+  border-top-right-radius: 10rem;
+  width: 100%;
+  height: 36.8rem;
+  background-repeat: no-repeat;
+  background-size: 160%;
+  background-position: center bottom;
+}
+
+@media (min-width: 64em) {
+  .sec__2 .temp::before {
+    width: 160%;
+    background-size: 118%;
+    background-position: -21.5rem -51rem;
+    border-bottom-left-radius: 10rem;
+    height: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.sec__2 .temp::after {
+  content: "";
+  background: url("../../images/illustration-phones.svg");
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  top: -18rem;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 64em) {
+  .sec__2 .temp::after {
+    width: 104%;
+    height: 58rem;
+    left: -37px;
+    top: -7rem;
+  }
+}
+
+.sec__2 .rem__sec2 {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding-top: 23rem;
+  padding-inline: 2.4rem;
+  z-index: 1;
+}
+
+@media (min-width: 64em) {
+  .sec__2 .rem__sec2 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 72rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0;
+    padding-left: 3.2rem;
+    text-align: left;
+  }
+}
+
+.sec__2 .rem__sec2 h2 {
+  font-size: 3.4rem;
+  margin-bottom: 3rem;
+  margin-top: 0;
+}
+
+.sec__2 .rem__sec2 p {
+  padding-inline: 0;
+  color: #c8c8cb;
 }
 /*# sourceMappingURL=style.css.map */
